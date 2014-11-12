@@ -1,31 +1,24 @@
 language: python
-
 before_install:
- - sudo apt-get update -qq
- - sudo apt-get install -y python-lxml python-pip
+- sudo apt-get update -qq
+- sudo apt-get install -y python-lxml python-pip
 install:
- # here we don't use the travis default virtualenv because that
- # causes us to install lxml again below, doubling the build time
- # when it compiles the native modules from source
- - deactivate
- - gem install kramdown-rfc2629
- - sudo pip install xml2rfc
-
+- deactivate
+- gem install kramdown-rfc2629
+- sudo pip install xml2rfc
 script: make ghpages
-
 env:
   global:
-    - secure: "<insert encrypted GH_TOKEN=blah here>"
-
+  - secure: iDGMQnNWQQnbIU07SCDsoiwwWhUcueMYBLaZgx7kN/m1HYt/dgqYoFQwLOBNykVFZY2IZL5TEnCEv/HlExjVNo8tWJIPfzK5vGM7B9DaVTVH69zUt9RHtXFbLeSlMdYdqsAa0ei7a2Xg973ElMLq1Z+O4vZFdatTqJ5r6HURodM=
 before_deploy: make submit
 deploy:
   provider: releases
   api-key:
-    secure: "<insert encrypted API key here>"
+    secure: Z1BzlSutgH6Mde6RTA2+O/B7Ud82+z0jRxJSCEzsIbJb/qIVbZPxGC5a+TtE32zoP1W+TPV9gXvc8cBriiSULTWhmFxoGVyxUYdhF2aNrqfIFHuzYzQkAGFuiR1UbXPlulUdNXV7u22cV1Pgl+QqmexL10kqEd8mFSHEoZTgkEg=
   file:
-    - $TRAVIS_TAG.txt
-    - $TRAVIS_TAG.html
-    - $TRAVIS_TAG.xml
+  - "$TRAVIS_TAG.txt"
+  - "$TRAVIS_TAG.html"
+  - "$TRAVIS_TAG.xml"
   skip_cleanup: true
   on:
     branch: master
