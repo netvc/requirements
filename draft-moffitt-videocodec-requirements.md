@@ -42,6 +42,7 @@ The following applications should be considered for Internet video codecs,
 along with their requirements:
 
 - Point-to-point calls
+- Broadcast
 - Conferencing
 - Telepresence
 - Teleoperation
@@ -60,7 +61,8 @@ along with their requirements:
 - 8bit to 12bit
 - loss robustness
 - loss concealment?
-- 420, 444, 422, 411
+- error recovery
+- 420, 444, 422
 - color spaces: req 709 and 2020
 - alpha plane
 - parallelism considerations (entropy coder in spearate thread, wavefront
