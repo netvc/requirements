@@ -73,7 +73,7 @@ along with their requirements:
 explicit non-requirements:
 
 - multiview
-- svc
+- scalable video coding
 - bit-error robustness
 
 
