@@ -1,0 +1,10 @@
+*.redxml
+draft*.txt
+draft*.html
+*.pdf
+*~
+*.swp
+/*-[0-9][0-9].xml
+.refcache
+.i-d-template
+
