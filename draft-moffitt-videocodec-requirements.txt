@@ -4,8 +4,8 @@
 
 Network Working Group                                         J. Moffitt
 Internet-Draft                                                   Mozilla
-Intended status: Informational                         November 12, 2014
-Expires: May 16, 2015
+Intended status: Informational                         November 10, 2014
+Expires: May 14, 2015
 
 
                         Video Codec Requirements
@@ -32,7 +32,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 16, 2015.
+   This Internet-Draft will expire on May 14, 2015.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Moffitt                   Expires May 16, 2015                  [Page 1]
+Moffitt                   Expires May 14, 2015                  [Page 1]
 
 Internet-Draft          Video Codec Requirements           November 2014
 
@@ -67,8 +67,7 @@ Table of Contents
    5.  Detailed Basic Requirements . . . . . . . . . . . . . . . . .   2
    6.  Additional Considerations . . . . . . . . . . . . . . . . . .   3
    7.  Security Considerations . . . . . . . . . . . . . . . . . . .   3
-   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   3
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   3
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
 
 1.  Introduction
 
@@ -80,6 +79,8 @@ Table of Contents
    codecs, along with their requirements:
 
    o  Point-to-point calls
+
+   o  Broadcast
 
    o  Conferencing
 
@@ -105,20 +106,23 @@ Table of Contents
 
    o  any resolution from 1x1 to 4k?
 
-   o  8bit to 12bit
 
 
 
-Moffitt                   Expires May 16, 2015                  [Page 2]
+Moffitt                   Expires May 14, 2015                  [Page 2]
 
 Internet-Draft          Video Codec Requirements           November 2014
 
+
+   o  8bit to 12bit
 
    o  loss robustness
 
    o  loss concealment?
 
-   o  420, 444, 422, 411
+   o  error recovery
+
+   o  420, 444, 422
 
    o  color spaces: req 709 and 2020
 
@@ -135,7 +139,7 @@ Internet-Draft          Video Codec Requirements           November 2014
 
    o  multiview
 
-   o  svc
+   o  scalable video coding
 
    o  bit-error robustness
 
@@ -158,17 +162,15 @@ Internet-Draft          Video Codec Requirements           November 2014
 
    _todo_
 
-8.  References
-
-Author's Address
 
 
 
-
-Moffitt                   Expires May 16, 2015                  [Page 3]
+Moffitt                   Expires May 14, 2015                  [Page 3]
 
 Internet-Draft          Video Codec Requirements           November 2014
 
+
+Author's Address
 
    Jack Moffitt
    Mozilla
@@ -219,6 +221,4 @@ Internet-Draft          Video Codec Requirements           November 2014
 
 
 
-
-
-Moffitt                   Expires May 16, 2015                  [Page 4]
+Moffitt                   Expires May 14, 2015                  [Page 4]
