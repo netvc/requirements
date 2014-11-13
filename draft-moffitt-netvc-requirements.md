@@ -76,8 +76,8 @@ of a video codec
 - 420, 444, 422
 - color spaces: req 709 and 2020
 - alpha plane
-- parallelism considerations (entropy coder in spearate thread, wavefront
-  parallel, etc)
+- parallelism considerations (entropy coder in separate thread, wavefront
+  parallel, etc.)
 - hardware feasibility
 - software feasibility
 
@@ -91,12 +91,12 @@ explicit non-requirements:
 # Additional Considerations
 
 The features described in this section are potentially desirable but are not
-part of the strict requirements. The benefits of them should be weighed
-against their costs before including them in the codec.
+part of the strict requirements. Their benefits should be weighed against
+their costs before including them in the codec.
 
 - lossless
 - RGB mode
-- aux planes (depth, etc)
+- aux planes (depth, etc.)
 
 # Security Considerations
 
