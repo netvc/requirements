@@ -1,0 +1,224 @@
+
+
+
+
+Network Working Group                                         J. Moffitt
+Internet-Draft                                                   Mozilla
+Intended status: Informational                         November 10, 2014
+Expires: May 14, 2015
+
+
+                        Video Codec Requirements
+                draft-moffitt-netvc-requirements-latest
+
+Abstract
+
+   This document provides specific requirements for an Internet video
+   codec.  These requirements address quality, bit-rate, and packet-loss
+   robustness, as well as other desirable properties.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at http://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on May 14, 2015.
+
+Copyright Notice
+
+   Copyright (c) 2014 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents
+   (http://trustee.ietf.org/license-info) in effect on the date of
+   publication of this document.  Please review these documents
+   carefully, as they describe your rights and restrictions with respect
+   to this document.  Code Components extracted from this document must
+   include Simplified BSD License text as described in Section 4.e of
+   the Trust Legal Provisions and are provided without warranty as
+   described in the Simplified BSD License.
+
+
+
+
+
+Moffitt                   Expires May 14, 2015                  [Page 1]
+
+Internet-Draft          Video Codec Requirements           November 2014
+
+
+Table of Contents
+
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  Applications  . . . . . . . . . . . . . . . . . . . . . . . .   2
+     2.1.  Point-to-Point Calls  . . . . . . . . . . . . . . . . . .   3
+   3.  Constraints Imposed by the Internet on the Codec  . . . . . .   3
+   4.  Detailed Basic Requirements . . . . . . . . . . . . . . . . .   3
+   5.  Additional Considerations . . . . . . . . . . . . . . . . . .   4
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
+
+1.  Introduction
+
+   This document provides requirements for a video codec designed
+   specifically for use over the Internet.  The requirements attempt to
+   address the needs of the most common streaming and interactive video
+   transmission applications and ensure good quality when operating in
+   typical Internet conditions.  These requirements also address issues
+   of quality, frame rate, bit-rate, and packet-loss robustness.  Other
+   desirable but not required video codec properties are also
+   considered.
+
+2.  Applications
+
+   The following applications should be considered for Internet video
+   codecs, along with their requirements:
+
+   o  Point-to-point calls
+
+   o  Broadcast
+
+   o  Conferencing
+
+   o  Telepresence
+
+   o  Teleoperation
+
+   o  Screencasting
+
+   o  In-game video chat
+
+   o  Video storage
+
+   o  Other applications
+
+
+
+
+
+
+
+Moffitt                   Expires May 14, 2015                  [Page 2]
+
+Internet-Draft          Video Codec Requirements           November 2014
+
+
+2.1.  Point-to-Point Calls
+
+   One-to-one video chat applications are proliferating.  These
+   interactive uses of a video codec
+
+3.  Constraints Imposed by the Internet on the Codec
+
+4.  Detailed Basic Requirements
+
+   o  variable frame rate
+
+   o  variable resolution
+
+   o  any resolution from 1x1 to 4k?
+
+   o  8bit to 12bit
+
+   o  loss robustness
+
+   o  loss concealment?
+
+   o  error recovery
+
+   o  420, 444, 422
+
+   o  color spaces: req 709 and 2020
+
+   o  alpha plane
+
+   o  parallelism considerations (entropy coder in spearate thread,
+      wavefront parallel, etc)
+
+   o  hardware feasibility
+
+   o  software feasibility
+
+   explicit non-requirements:
+
+   o  multiview
+
+   o  scalable video coding
+
+   o  bit-error robustness
+
+
+
+
+
+
+
+
+Moffitt                   Expires May 14, 2015                  [Page 3]
+
+Internet-Draft          Video Codec Requirements           November 2014
+
+
+5.  Additional Considerations
+
+   The features described in this section are potentially desirable but
+   are not part of the strict requirements.  The benefits of them should
+   be weighed against their costs before including them in the codec.
+
+   o  lossless
+
+   o  RGB mode
+
+   o  aux planes (depth, etc)
+
+6.  Security Considerations
+
+   Although this document itself does not have security considerations,
+   this section describes the security requirements for the codec.
+
+   _todo_
+
+Author's Address
+
+   Jack Moffitt
+   Mozilla
+
+   Email: jack@metajack.im
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Moffitt                   Expires May 14, 2015                  [Page 4]

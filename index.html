@@ -454,12 +454,12 @@ ul.toc a:first-child {
 
   <link href="#rfc.toc" rel="Contents"/>
 <link href="#rfc.section.1" rel="Chapter" title="1 Introduction"/>
-<link href="#rfc.section.2" rel="Chapter" title="2 Definitions"/>
-<link href="#rfc.section.3" rel="Chapter" title="3 Applications"/>
-<link href="#rfc.section.4" rel="Chapter" title="4 Constraints Imposed by the Internet on the Codec"/>
-<link href="#rfc.section.5" rel="Chapter" title="5 Detailed Basic Requirements"/>
-<link href="#rfc.section.6" rel="Chapter" title="6 Additional Considerations"/>
-<link href="#rfc.section.7" rel="Chapter" title="7 Security Considerations"/>
+<link href="#rfc.section.2" rel="Chapter" title="2 Applications"/>
+<link href="#rfc.section.2.1" rel="Chapter" title="2.1 Point-to-Point Calls"/>
+<link href="#rfc.section.3" rel="Chapter" title="3 Constraints Imposed by the Internet on the Codec"/>
+<link href="#rfc.section.4" rel="Chapter" title="4 Detailed Basic Requirements"/>
+<link href="#rfc.section.5" rel="Chapter" title="5 Additional Considerations"/>
+<link href="#rfc.section.6" rel="Chapter" title="6 Security Considerations"/>
 <link href="#rfc.authors" rel="Chapter"/>
 
 
@@ -467,7 +467,7 @@ ul.toc a:first-child {
   <link rel="schema.dct" href="http://purl.org/dc/terms/" />
 
   <meta name="dct.creator" content="Moffitt, J." />
-  <meta name="dct.identifier" content="urn:ietf:id:draft-moffitt-videocodec-requirements-latest" />
+  <meta name="dct.identifier" content="urn:ietf:id:draft-moffitt-netvc-requirements-latest" />
   <meta name="dct.issued" scheme="ISO8601" content="2014-11-10" />
   <meta name="dct.abstract" content="This document provides specific requirements for an Internet video codec.  These requirements address quality, bit-rate, and packet-loss robustness, as well as other desirable properties." />
   <meta name="description" content="This document provides specific requirements for an Internet video codec.  These requirements address quality, bit-rate, and packet-loss robustness, as well as other desirable properties." />
@@ -501,7 +501,7 @@ ul.toc a:first-child {
   </table>
 
   <p class="title">Video Codec Requirements<br />
-  <span class="filename">draft-moffitt-videocodec-requirements-latest</span></p>
+  <span class="filename">draft-moffitt-netvc-requirements-latest</span></p>
   
   <h1 id="rfc.abstract">
   <a href="#rfc.abstract">Abstract</a>
@@ -526,21 +526,21 @@ ul.toc a:first-child {
   <ul class="toc">
 
   	<li>1.   <a href="#rfc.section.1">Introduction</a></li>
-<li>2.   <a href="#rfc.section.2">Definitions</a></li>
-<li>3.   <a href="#rfc.section.3">Applications</a></li>
-<li>4.   <a href="#rfc.section.4">Constraints Imposed by the Internet on the Codec</a></li>
-<li>5.   <a href="#rfc.section.5">Detailed Basic Requirements</a></li>
-<li>6.   <a href="#rfc.section.6">Additional Considerations</a></li>
-<li>7.   <a href="#rfc.section.7">Security Considerations</a></li>
+<li>2.   <a href="#rfc.section.2">Applications</a></li>
+<li>2.1.   <a href="#rfc.section.2.1">Point-to-Point Calls</a></li>
+<li>3.   <a href="#rfc.section.3">Constraints Imposed by the Internet on the Codec</a></li>
+<li>4.   <a href="#rfc.section.4">Detailed Basic Requirements</a></li>
+<li>5.   <a href="#rfc.section.5">Additional Considerations</a></li>
+<li>6.   <a href="#rfc.section.6">Security Considerations</a></li>
 <li><a href="#rfc.authors">Author's Address</a></li>
 
 
   </ul>
 
   <h1 id="rfc.section.1"><a href="#rfc.section.1">1.</a> <a href="#introduction" id="introduction">Introduction</a></h1>
-<h1 id="rfc.section.2"><a href="#rfc.section.2">2.</a> <a href="#definitions" id="definitions">Definitions</a></h1>
-<h1 id="rfc.section.3"><a href="#rfc.section.3">3.</a> <a href="#applications" id="applications">Applications</a></h1>
-<p id="rfc.section.3.p.1">The following applications should be considered for Internet video codecs, along with their requirements:</p>
+<p id="rfc.section.1.p.1">This document provides requirements for a video codec designed specifically for use over the Internet. The requirements attempt to address the needs of the most common streaming and interactive video transmission applications and ensure good quality when operating in typical Internet conditions. These requirements also address issues of quality, frame rate, bit-rate, and packet-loss robustness. Other desirable but not required video codec properties are also considered.</p>
+<h1 id="rfc.section.2"><a href="#rfc.section.2">2.</a> <a href="#applications" id="applications">Applications</a></h1>
+<p id="rfc.section.2.p.1">The following applications should be considered for Internet video codecs, along with their requirements:</p>
 <p/>
 
 <ul>
@@ -554,8 +554,10 @@ ul.toc a:first-child {
   <li>Video storage</li>
   <li>Other applications</li>
 </ul>
-<h1 id="rfc.section.4"><a href="#rfc.section.4">4.</a> <a href="#constraints-imposed-by-the-internet-on-the-codec" id="constraints-imposed-by-the-internet-on-the-codec">Constraints Imposed by the Internet on the Codec</a></h1>
-<h1 id="rfc.section.5"><a href="#rfc.section.5">5.</a> <a href="#detailed-basic-requirements" id="detailed-basic-requirements">Detailed Basic Requirements</a></h1>
+<h1 id="rfc.section.2.1"><a href="#rfc.section.2.1">2.1.</a> <a href="#point-to-point-calls" id="point-to-point-calls">Point-to-Point Calls</a></h1>
+<p id="rfc.section.2.1.p.1">One-to-one video chat applications are proliferating. These interactive uses of a video codec </p>
+<h1 id="rfc.section.3"><a href="#rfc.section.3">3.</a> <a href="#constraints-imposed-by-the-internet-on-the-codec" id="constraints-imposed-by-the-internet-on-the-codec">Constraints Imposed by the Internet on the Codec</a></h1>
+<h1 id="rfc.section.4"><a href="#rfc.section.4">4.</a> <a href="#detailed-basic-requirements" id="detailed-basic-requirements">Detailed Basic Requirements</a></h1>
 <p/>
 
 <ul>
@@ -573,16 +575,16 @@ ul.toc a:first-child {
   <li>hardware feasibility</li>
   <li>software feasibility</li>
 </ul>
-<p id="rfc.section.5.p.2">explicit non-requirements:</p>
+<p id="rfc.section.4.p.2">explicit non-requirements:</p>
 <p/>
 
 <ul>
   <li>multiview</li>
-  <li>svc</li>
+  <li>scalable video coding</li>
   <li>bit-error robustness</li>
 </ul>
-<h1 id="rfc.section.6"><a href="#rfc.section.6">6.</a> <a href="#additional-considerations" id="additional-considerations">Additional Considerations</a></h1>
-<p id="rfc.section.6.p.1">The features described in this section are potentially desirable but are not part of the strict requirements. The benefits of them should be weighed against their costs before including them in the codec.</p>
+<h1 id="rfc.section.5"><a href="#rfc.section.5">5.</a> <a href="#additional-considerations" id="additional-considerations">Additional Considerations</a></h1>
+<p id="rfc.section.5.p.1">The features described in this section are potentially desirable but are not part of the strict requirements. The benefits of them should be weighed against their costs before including them in the codec.</p>
 <p/>
 
 <ul>
@@ -590,8 +592,8 @@ ul.toc a:first-child {
   <li>RGB mode</li>
   <li>aux planes (depth, etc)</li>
 </ul>
-<h1 id="rfc.section.7"><a href="#rfc.section.7">7.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a></h1>
-<p id="rfc.section.7.p.1">Although this document itself does not have security considerations, this section describes the security requirements for the codec.</p>
+<h1 id="rfc.section.6"><a href="#rfc.section.6">6.</a> <a href="#security-considerations" id="security-considerations">Security Considerations</a></h1>
+<p id="rfc.section.6.p.1">Although this document itself does not have security considerations, this section describes the security requirements for the codec.</p>
 <p>
   <em>todo</em>
 </p>
