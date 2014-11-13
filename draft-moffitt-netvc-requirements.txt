@@ -143,8 +143,8 @@ Internet-Draft          Video Codec Requirements           November 2014
 
    o  alpha plane
 
-   o  parallelism considerations (entropy coder in spearate thread,
-      wavefront parallel, etc)
+   o  parallelism considerations (entropy coder in separate thread,
+      wavefront parallel, etc.)
 
    o  hardware feasibility
 
@@ -173,14 +173,14 @@ Internet-Draft          Video Codec Requirements           November 2014
 5.  Additional Considerations
 
    The features described in this section are potentially desirable but
-   are not part of the strict requirements.  The benefits of them should
-   be weighed against their costs before including them in the codec.
+   are not part of the strict requirements.  Their benefits should be
+   weighed against their costs before including them in the codec.
 
    o  lossless
 
    o  RGB mode
 
-   o  aux planes (depth, etc)
+   o  aux planes (depth, etc.)
 
 6.  Security Considerations
 
