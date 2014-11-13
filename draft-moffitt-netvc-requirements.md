@@ -76,7 +76,7 @@ of a video codec
 - 420, 444, 422
 - color spaces: req 709 and 2020
 - alpha plane
-- parallelism considerations (entropy coder in spearate thread, wavefront
+- parallelism considerations (entropy coder in separate thread, wavefront
   parallel, etc)
 - hardware feasibility
 - software feasibility
