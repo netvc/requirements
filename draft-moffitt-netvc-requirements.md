@@ -77,7 +77,7 @@ of a video codec
 - color spaces: req 709 and 2020
 - alpha plane
 - parallelism considerations (entropy coder in separate thread, wavefront
-  parallel, etc)
+  parallel, etc.)
 - hardware feasibility
 - software feasibility
 
@@ -96,7 +96,7 @@ against their costs before including them in the codec.
 
 - lossless
 - RGB mode
-- aux planes (depth, etc)
+- aux planes (depth, etc.)
 
 # Security Considerations
 
