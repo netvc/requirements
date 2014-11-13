@@ -139,7 +139,7 @@ Internet-Draft          Video Codec Requirements           November 2014
 
    o  multiview
 
-   o  scalable video coding
+   o  svc
 
    o  bit-error robustness
 
