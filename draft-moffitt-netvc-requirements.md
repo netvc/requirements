@@ -91,8 +91,8 @@ explicit non-requirements:
 # Additional Considerations
 
 The features described in this section are potentially desirable but are not
-part of the strict requirements. The benefits of them should be weighed
-against their costs before including them in the codec.
+part of the strict requirements. Their benefits should be weighed against
+their costs before including them in the codec.
 
 - lossless
 - RGB mode
