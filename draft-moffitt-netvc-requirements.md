@@ -1,6 +1,6 @@
 ---
 title: Video Codec Requirements
-docname: draft-moffitt-videocodec-requirements-latest
+docname: draft-moffitt-netvc-requirements-latest
 date: 2014-11-10
 category: info
 
@@ -34,8 +34,14 @@ robustness, as well as other desirable properties.
 
 # Introduction
 
-# Definitions
-
+This document provides requirements for a video codec designed specifically
+for use over the Internet. The requirements attempt to address the needs of
+the most common streaming and interactive video transmission applications and
+ensure good quality when operating in typical Internet conditions. These
+requirements also address issues of quality, frame rate, bit-rate, and
+packet-loss robustness. Other desirable but not required video codec
+properties are also considered.
+   
 # Applications
 
 The following applications should be considered for Internet video codecs,
@@ -50,6 +56,11 @@ along with their requirements:
 - In-game video chat
 - Video storage
 - Other applications
+
+## Point-to-Point Calls
+
+One-to-one video chat applications are proliferating. These interactive uses
+of a video codec 
 
 # Constraints Imposed by the Internet on the Codec
 
