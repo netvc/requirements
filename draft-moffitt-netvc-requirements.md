@@ -1,7 +1,7 @@
 ---
 title: Video Codec Requirements
 docname: draft-moffitt-netvc-requirements-latest
-date: 2014-11-10
+date: 2015-13-09
 category: info
 
 ipr: trust200902
@@ -122,9 +122,13 @@ fidelity than normal video. Second, the input for the encoder is potentially
 higher level than raw pixels or contains both pixels and higher level objects
 such as text along with font and positioning information.
 
-## In-game Video Chat
-
 ## Video Storage
+
+Archival video brings several unique requirements. Many applications will want
+lossless compression or very high rates, and others will want low
+complexity. Examples of the former include archival storage of film masters;
+examples of the latter would be surveillance gear or video camera capture
+systems.
 
 ## Other Applications
 
@@ -133,6 +137,13 @@ needed to enable these applications should be sufficient to meet the needs of
 many other applications that were not listed.
 
 # Constraints Imposed by the Internet on the Codec
+
+- must be able to interpret packets when previous packets are lost
+- prediction across frames is reasonable but must allow for resync
+- keyframes and other features for dynamic resync
+- ability to vary bandwidth because of internet best-effort
+- ECN
+- use with other multimedia standards
 
 # Detailed Basic Requirements
 
@@ -173,4 +184,10 @@ their costs before including them in the codec.
 Although this document itself does not have security considerations, this
 section describes the security requirements for the codec.
 
-*todo*
+As for any protocol to be used over the Internet, security is a very important
+aspect to consider.  This goes beyond the obvious considerations of preventing
+buffer overflows and similar attacks that can lead to denial-of-service (DoS)
+or remote code execution.  One very important security aspect is to make sure
+that the decoders have a bounded and reasonable worst-case complexity.  This
+prevents an attacker from causing a DoS by sending packets that are specially
+crafted to take a very long (or infinite) time to decode.
