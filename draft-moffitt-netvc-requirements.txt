@@ -5,8 +5,8 @@
 Network Working Group                                         J. Moffitt
 Internet-Draft                                                   Mozilla
 Intended status: Informational                                 M. Zanaty
-Expires: May 14, 2015                                              Cisco
-                                                       November 10, 2014
+Expires: September 10, 2015                                        Cisco
+                                                           March 9, 2015
 
 
                         Video Codec Requirements
@@ -33,11 +33,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 14, 2015.
+   This Internet-Draft will expire on September 10, 2015.
 
 Copyright Notice
 
-   Copyright (c) 2014 IETF Trust and the persons identified as the
+   Copyright (c) 2015 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Moffitt & Zanaty          Expires May 14, 2015                  [Page 1]
+Moffitt & Zanaty       Expires September 10, 2015               [Page 1]
 
-Internet-Draft          Video Codec Requirements           November 2014
+Internet-Draft          Video Codec Requirements              March 2015
 
 
 Table of Contents
@@ -68,14 +68,13 @@ Table of Contents
      2.4.  Telepresence  . . . . . . . . . . . . . . . . . . . . . .   3
      2.5.  Teleoperation . . . . . . . . . . . . . . . . . . . . . .   4
      2.6.  Screencasting . . . . . . . . . . . . . . . . . . . . . .   4
-     2.7.  In-game Video Chat  . . . . . . . . . . . . . . . . . . .   4
-     2.8.  Video Storage . . . . . . . . . . . . . . . . . . . . . .   4
-     2.9.  Other Applications  . . . . . . . . . . . . . . . . . . .   4
+     2.7.  Video Storage . . . . . . . . . . . . . . . . . . . . . .   4
+     2.8.  Other Applications  . . . . . . . . . . . . . . . . . . .   4
    3.  Constraints Imposed by the Internet on the Codec  . . . . . .   4
-   4.  Detailed Basic Requirements . . . . . . . . . . . . . . . . .   4
+   4.  Detailed Basic Requirements . . . . . . . . . . . . . . . . .   5
    5.  Additional Considerations . . . . . . . . . . . . . . . . . .   5
-   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   5
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   6
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   6
 
 1.  Introduction
 
@@ -109,9 +108,10 @@ Table of Contents
 
 
 
-Moffitt & Zanaty          Expires May 14, 2015                  [Page 2]
+
+Moffitt & Zanaty       Expires September 10, 2015               [Page 2]
 
-Internet-Draft          Video Codec Requirements           November 2014
+Internet-Draft          Video Codec Requirements              March 2015
 
 
    o  Video storage
@@ -165,9 +165,9 @@ Internet-Draft          Video Codec Requirements           November 2014
 
 
 
-Moffitt & Zanaty          Expires May 14, 2015                  [Page 3]
+Moffitt & Zanaty       Expires September 10, 2015               [Page 3]
 
-Internet-Draft          Video Codec Requirements           November 2014
+Internet-Draft          Video Codec Requirements              March 2015
 
 
 2.5.  Teleoperation
@@ -192,17 +192,41 @@ Internet-Draft          Video Codec Requirements           November 2014
    contains both pixels and higher level objects such as text along with
    font and positioning information.
 
-2.7.  In-game Video Chat
+2.7.  Video Storage
 
-2.8.  Video Storage
+   Archival video brings several unique requirements.  Many applications
+   will want lossless compression or very high rates, and others will
+   want low complexity.  Examples of the former include archival storage
+   of film masters; examples of the latter would be surveillance gear or
+   video camera capture systems.
 
-2.9.  Other Applications
+2.8.  Other Applications
 
    The preceding list of application is by no means complete.  The
    requirements needed to enable these applications should be sufficient
    to meet the needs of many other applications that were not listed.
 
 3.  Constraints Imposed by the Internet on the Codec
+
+   o  must be able to interpret packets when previous packets are lost
+
+   o  prediction across frames is reasonable but must allow for resync
+
+   o  keyframes and other features for dynamic resync
+
+   o  ability to vary bandwidth because of internet best-effort
+
+   o  ECN
+
+
+
+
+Moffitt & Zanaty       Expires September 10, 2015               [Page 4]
+
+Internet-Draft          Video Codec Requirements              March 2015
+
+
+   o  use with other multimedia standards
 
 4.  Detailed Basic Requirements
 
@@ -217,14 +241,6 @@ Internet-Draft          Video Codec Requirements           November 2014
    o  loss robustness
 
    o  loss concealment?
-
-
-
-
-Moffitt & Zanaty          Expires May 14, 2015                  [Page 4]
-
-Internet-Draft          Video Codec Requirements           November 2014
-
 
    o  error recovery
 
@@ -259,6 +275,13 @@ Internet-Draft          Video Codec Requirements           November 2014
 
    o  RGB mode
 
+
+
+Moffitt & Zanaty       Expires September 10, 2015               [Page 5]
+
+Internet-Draft          Video Codec Requirements              March 2015
+
+
    o  aux planes (depth, etc.)
 
 6.  Security Considerations
@@ -266,7 +289,14 @@ Internet-Draft          Video Codec Requirements           November 2014
    Although this document itself does not have security considerations,
    this section describes the security requirements for the codec.
 
-   _todo_
+   As for any protocol to be used over the Internet, security is a very
+   important aspect to consider.  This goes beyond the obvious
+   considerations of preventing buffer overflows and similar attacks
+   that can lead to denial-of-service (DoS) or remote code execution.
+   One very important security aspect is to make sure that the decoders
+   have a bounded and reasonable worst-case complexity.  This prevents
+   an attacker from causing a DoS by sending packets that are specially
+   crafted to take a very long (or infinite) time to decode.
 
 Authors' Addresses
 
@@ -274,12 +304,6 @@ Authors' Addresses
    Mozilla
 
    Email: jack@metajack.im
-
-
-
-Moffitt & Zanaty          Expires May 14, 2015                  [Page 5]
-
-Internet-Draft          Video Codec Requirements           November 2014
 
 
    Mo Zanaty
@@ -309,28 +333,4 @@ Internet-Draft          Video Codec Requirements           November 2014
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Moffitt & Zanaty          Expires May 14, 2015                  [Page 6]
+Moffitt & Zanaty       Expires September 10, 2015               [Page 6]
