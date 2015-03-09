@@ -456,6 +456,14 @@ ul.toc a:first-child {
 <link href="#rfc.section.1" rel="Chapter" title="1 Introduction"/>
 <link href="#rfc.section.2" rel="Chapter" title="2 Applications"/>
 <link href="#rfc.section.2.1" rel="Chapter" title="2.1 Point-to-Point Calls"/>
+<link href="#rfc.section.2.2" rel="Chapter" title="2.2 Broadcast"/>
+<link href="#rfc.section.2.3" rel="Chapter" title="2.3 Conferencing"/>
+<link href="#rfc.section.2.4" rel="Chapter" title="2.4 Telepresence"/>
+<link href="#rfc.section.2.5" rel="Chapter" title="2.5 Teleoperation"/>
+<link href="#rfc.section.2.6" rel="Chapter" title="2.6 Screencasting"/>
+<link href="#rfc.section.2.7" rel="Chapter" title="2.7 In-game Video Chat"/>
+<link href="#rfc.section.2.8" rel="Chapter" title="2.8 Video Storage"/>
+<link href="#rfc.section.2.9" rel="Chapter" title="2.9 Other Applications"/>
 <link href="#rfc.section.3" rel="Chapter" title="3 Constraints Imposed by the Internet on the Codec"/>
 <link href="#rfc.section.4" rel="Chapter" title="4 Detailed Basic Requirements"/>
 <link href="#rfc.section.5" rel="Chapter" title="5 Additional Considerations"/>
@@ -463,10 +471,10 @@ ul.toc a:first-child {
 <link href="#rfc.authors" rel="Chapter"/>
 
 
-  <meta name="generator" content="xml2rfc version 2.4.8 - http://tools.ietf.org/tools/xml2rfc" />
+  <meta name="generator" content="xml2rfc version 2.4.10 - http://tools.ietf.org/tools/xml2rfc" />
   <link rel="schema.dct" href="http://purl.org/dc/terms/" />
 
-  <meta name="dct.creator" content="Moffitt, J." />
+  <meta name="dct.creator" content="Moffitt, J. and M. Zanaty" />
   <meta name="dct.identifier" content="urn:ietf:id:draft-moffitt-netvc-requirements-latest" />
   <meta name="dct.issued" scheme="ISO8601" content="2014-11-10" />
   <meta name="dct.abstract" content="This document provides specific requirements for an Internet video codec.  These requirements address quality, bit-rate, and packet-loss robustness, as well as other desirable properties." />
@@ -489,11 +497,15 @@ ul.toc a:first-child {
 </tr>
 <tr>
   <td class="left">Intended status: Informational</td>
-  <td class="right">November 10, 2014</td>
+  <td class="right">M. Zanaty</td>
 </tr>
 <tr>
   <td class="left">Expires: May 14, 2015</td>
-  <td class="right"></td>
+  <td class="right">Cisco</td>
+</tr>
+<tr>
+  <td class="left"></td>
+  <td class="right">November 10, 2014</td>
 </tr>
 
     	
@@ -527,12 +539,20 @@ ul.toc a:first-child {
 
   	<li>1.   <a href="#rfc.section.1">Introduction</a></li>
 <li>2.   <a href="#rfc.section.2">Applications</a></li>
-<li>2.1.   <a href="#rfc.section.2.1">Point-to-Point Calls</a></li>
-<li>3.   <a href="#rfc.section.3">Constraints Imposed by the Internet on the Codec</a></li>
+<ul><li>2.1.   <a href="#rfc.section.2.1">Point-to-Point Calls</a></li>
+<li>2.2.   <a href="#rfc.section.2.2">Broadcast</a></li>
+<li>2.3.   <a href="#rfc.section.2.3">Conferencing</a></li>
+<li>2.4.   <a href="#rfc.section.2.4">Telepresence</a></li>
+<li>2.5.   <a href="#rfc.section.2.5">Teleoperation</a></li>
+<li>2.6.   <a href="#rfc.section.2.6">Screencasting</a></li>
+<li>2.7.   <a href="#rfc.section.2.7">In-game Video Chat</a></li>
+<li>2.8.   <a href="#rfc.section.2.8">Video Storage</a></li>
+<li>2.9.   <a href="#rfc.section.2.9">Other Applications</a></li>
+</ul><li>3.   <a href="#rfc.section.3">Constraints Imposed by the Internet on the Codec</a></li>
 <li>4.   <a href="#rfc.section.4">Detailed Basic Requirements</a></li>
 <li>5.   <a href="#rfc.section.5">Additional Considerations</a></li>
 <li>6.   <a href="#rfc.section.6">Security Considerations</a></li>
-<li><a href="#rfc.authors">Author's Address</a></li>
+<li><a href="#rfc.authors">Authors' Addresses</a></li>
 
 
   </ul>
@@ -555,7 +575,25 @@ ul.toc a:first-child {
   <li>Other applications</li>
 </ul>
 <h1 id="rfc.section.2.1"><a href="#rfc.section.2.1">2.1.</a> <a href="#point-to-point-calls" id="point-to-point-calls">Point-to-Point Calls</a></h1>
-<p id="rfc.section.2.1.p.1">One-to-one video chat applications are proliferating. These interactive uses of a video codec </p>
+<p id="rfc.section.2.1.p.1">One-to-one video chat applications are proliferating. These interactive uses of a video codec involve two connected participants sending and receiving encoded video to each other. Frame sizes will typically be 360p to 720p and bandwidth used around 1 Mbit/s.</p>
+<p id="rfc.section.2.1.p.2">The endpoints will need to negotiate and change session details during the call. For example, one endpoint may request higher resolution video when the size of the display window is increased.</p>
+<h1 id="rfc.section.2.2"><a href="#rfc.section.2.2">2.2.</a> <a href="#broadcast" id="broadcast">Broadcast</a></h1>
+<p id="rfc.section.2.2.p.1">Broadcasting is live or pre-recorded video being sent to many participants at the same time. This will typically involve frame sizes up to 1080p and bandwidth requirements as high as 6 Mbit/s.</p>
+<p id="rfc.section.2.2.p.2">Example applications in this area include on-demand video service like Netflix and YouTube as well as digital transmission of live sporting events.</p>
+<h1 id="rfc.section.2.3"><a href="#rfc.section.2.3">2.3.</a> <a href="#conferencing" id="conferencing">Conferencing</a></h1>
+<p id="rfc.section.2.3.p.1">Video conferencing requires many of the same things as point-to-point calls, but involves more than 2 participants. It is more complicated due to the shifting focus of attention among the participants. For example, when one participant is speaking, the user may prefer to have their video appear larger and the other participants smaller, which may have consequences for codec parameters.</p>
+<p id="rfc.section.2.3.p.2">Frame sizes and bitrates are similar to point-to-point applications.</p>
+<h1 id="rfc.section.2.4"><a href="#rfc.section.2.4">2.4.</a> <a href="#telepresence" id="telepresence">Telepresence</a></h1>
+<p id="rfc.section.2.4.p.1">Telepresence tries to use high fidelity reproduction to make remote video conference participants feel like they are real people in the same room. This requires high resolutions and large amounts of bandwidth. It is otherwise very similar to video conferencing applications.</p>
+<h1 id="rfc.section.2.5"><a href="#rfc.section.2.5">2.5.</a> <a href="#teleoperation" id="teleoperation">Teleoperation</a></h1>
+<p id="rfc.section.2.5.p.1">Teleoperation requires the high fidelity of telepresence, but includes increased requirements for low latency. Remote control of surgical tools is one example application.</p>
+<h1 id="rfc.section.2.6"><a href="#rfc.section.2.6">2.6.</a> <a href="#screencasting" id="screencasting">Screencasting</a></h1>
+<p id="rfc.section.2.6.p.1">Screencasting is the sharing of the contents of some or all of a computer or mobile display. It is commonly used to send the visual output of applications to other endpoints. For example, a speaker at a conference might share the window for their presentation program and a mobile app developer might want to record a demo of their application.</p>
+<p id="rfc.section.2.6.p.2">Two main features distinguish this application. First, since the inputs are often RGB, it is important to preserve the color information at a higher fidelity than normal video. Second, the input for the encoder is potentially higher level than raw pixels or contains both pixels and higher level objects such as text along with font and positioning information.</p>
+<h1 id="rfc.section.2.7"><a href="#rfc.section.2.7">2.7.</a> <a href="#in-game-video-chat" id="in-game-video-chat">In-game Video Chat</a></h1>
+<h1 id="rfc.section.2.8"><a href="#rfc.section.2.8">2.8.</a> <a href="#video-storage" id="video-storage">Video Storage</a></h1>
+<h1 id="rfc.section.2.9"><a href="#rfc.section.2.9">2.9.</a> <a href="#other-applications" id="other-applications">Other Applications</a></h1>
+<p id="rfc.section.2.9.p.1">The preceding list of application is by no means complete. The requirements needed to enable these applications should be sufficient to meet the needs of many other applications that were not listed.</p>
 <h1 id="rfc.section.3"><a href="#rfc.section.3">3.</a> <a href="#constraints-imposed-by-the-internet-on-the-codec" id="constraints-imposed-by-the-internet-on-the-codec">Constraints Imposed by the Internet on the Codec</a></h1>
 <h1 id="rfc.section.4"><a href="#rfc.section.4">4.</a> <a href="#detailed-basic-requirements" id="detailed-basic-requirements">Detailed Basic Requirements</a></h1>
 <p/>
@@ -598,7 +636,7 @@ ul.toc a:first-child {
   <em>todo</em>
 </p>
 <h1 id="rfc.authors">
-  <a href="#rfc.authors">Author's Address</a>
+  <a href="#rfc.authors">Authors' Addresses</a>
 </h1>
 <div class="avoidbreak">
   <address class="vcard">
@@ -619,6 +657,27 @@ ul.toc a:first-child {
 	  <span class="country-name vcardline"></span>
 	</span>
 	<span class="vcardline">EMail: <a href="mailto:jack@metajack.im">jack@metajack.im</a></span>
+
+  </address>
+</div><div class="avoidbreak">
+  <address class="vcard">
+	<span class="vcardline">
+	  <span class="fn">Mo Zanaty</span> 
+	  <span class="n hidden">
+		<span class="family-name">Zanaty</span>
+	  </span>
+	</span>
+	<span class="org vcardline">Cisco</span>
+	<span class="adr">
+	  
+	  <span class="vcardline">
+		<span class="locality"></span> 
+		<span class="region"></span>
+		<span class="code"></span>
+	  </span>
+	  <span class="country-name vcardline"></span>
+	</span>
+	<span class="vcardline">EMail: <a href="mailto:mzanaty@cisco.com">mzanaty@cisco.com</a></span>
 
   </address>
 </div>
